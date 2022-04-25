@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+    <h2>Time is :-</h2>  <p id="d1">Clock</p>
+    
+    <script>
+     function clk()
+     {
+         var d=new Date();
+         var hr=d.getHours();
+         var min=d.getMinutes();
+         var Secd1=d.getSeconds();
+        if(hr>=12)
+        {
+            md="pm";
+        }
+        else{
+            md="am"
+        }
+        if(hr>12){
+            hr=hr-12;
+        }
+        
+
+         document.getElementById("d1").innerHTML=hr+":"+min+":"+Secd1+md;
+     }
+     clk();
+     setInterval(clk,1000);
+    </script> 
+</body>
+</html>
